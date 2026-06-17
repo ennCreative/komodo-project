@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komodo-Project | Jasa Promosi Brand & Produk</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e4620, #2d6a4f);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1e4620;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-left: 5px solid #2d6a4f;
+            padding-left: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #f9fbf9;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e1ebe4;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #2d6a4f;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e1ebe4;
+        }
+
+        th {
+            background-color: #2d6a4f;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fbf9;
+        }
+
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 15px;
+            padding-left: 45px;
+            position: relative;
+        }
+
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #2d6a4f;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #d35400;
+        }
+
+        footer {
+            background: #1e4620;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            section { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Komodo-Project</h1>
+        <p>Melejitkan Brand Anda, Menyebarluaskan Inspirasi ke Audiens yang Tepat!</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="tentang">
+            <h2>Tentang Kami</h2>
+            <p>Punya produk bagus saja tidak cukup kalau tidak ada yang tahu. <strong>Komodo-Project</strong> hadir sebagai solusi. Kami adalah penyedia jasa promosi independen yang berdedikasi untuk membantu bisnis lokal, UMKM, hingga personal brand membangun kesadaran publik <em>(brand awareness)</em> dan menjangkau pasar yang lebih luas.</p>
+            <p style="margin-top: 10px;">Seperti namanya, kami membawa filosofi "Komodo": <strong>Tangguh, fokus, dan memiliki dampak yang besar.</strong></p>
+        </section>
+
+        <section id="layanan">
+            <h2>Layanan Jasa Promosi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Content Marketing</h3>
+                    <p>Pembuatan artikel promosi, review produk, dan copywriting persuasif yang menjual.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Social Media Amplification</h3>
+                    <p>Penyebaran informasi produk melalui jaringan media sosial untuk interaksi organik.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Branding</h3>
+                    <p>Konsultasi strategis menentukan arahampanye promosi agar efisien dan tepat sasaran.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Media Placement</h3>
+                    <p>Membantu menempatkan publikasi rilis produk Anda di berbagai platform digital strategis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="keunggulan">
+            <h2>Mengapa Memilih Kami?</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Keunggulan</th>
+                        <th>Manfaat untuk Anda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Strategi Tepat Sasaran</strong></td>
+                        <td>Promosi dirancang khusus sesuai target pasar produk Anda, bukan asal sebar.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Harga Kompetitif</strong></td>
+                        <td>Paket layanan ramah kantong, cocok untuk UMKM dan bisnis merintis.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laporan Transparan</strong></td>
+                        <td>Mendapatkan data perkembangan berkala dari setiap kampanye promosi berjalan.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Respon Cepat</strong></td>
+                        <td>Tim kami siap mendampingi dan mengeksekusi ide promosi Anda tanpa menunda waktu.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="kerjasama">
+            <h2>Cara Memulai Kerja Sama</h2>
+            <ul class="steps">
+                <li><strong>Konsultasi Gratis:</strong> Hubungi kami dan ceritakan produk atau info yang ingin disebarluaskan.</li>
+                <li><strong>Perancangan Strategi:</strong> Kami memberikan proposal singkat mengenai metode promosi terbaik.</li>
+                <li><strong>Eksekusi & Penyebaran:</strong> Tim Komodo-Project mulai mengeksekusi kampanye iklan Anda.</li>
+                <li><strong>Evaluasi:</strong> Kami menyerahkan laporan berkala hasil performa promosi kepada Anda.</li>
+            </ul>
+        </section>
+
+        <section id="kontak" style="text-align: center;">
+            <h2>Hubungi Kami</h2>
+            <p>Siap membuat produk atau brand Anda menjadi pusat perhatian dan kebanjiran konversi?</p>
+            <a href="https://wa.me/6281234567890?text=Halo%20Komodo%20Project,%20saya%20tertarik%20dengan%20jasa%20promosinya" class="cta-btn" target="_blank">Konsultasi via WhatsApp</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                Email: kontak@komodo-project.com | Jam Operasional: Senin - Sabtu (09.00 - 17.00 WIB)
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Komodo-Project. All Rights Reserved. Hubungkan Informasi, Perluas Jangkauan.</p>
+    </footer>
+
+</body>
+</html>
