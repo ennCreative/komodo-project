@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komodo Project | Profesional Digital Branding & Jasa Promosi</title>
-    <meta name="description" content="Komodo-Project membantu melejitkan brand dan produk Anda melalui strategi promosi digital yang efektif, tepat saran, dan transparan.">
-    <meta name="keywords" content="jasa promosi, promosi produk, digital branding, marketing umkm, komodo project">
-    <!-- Memanggil file CSS terpisah -->
+    <title>Komodo Project | Platform Promosi Brand & UMKM</title>
+    <meta name="description" content="Platform direktori dan promosi produk terbaik untuk UMKM dan brand lokal.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,146 +12,130 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">Komodo Project</a>
+            <a href="#" class="logo">
+                <!-- SLOT LOGO: Nanti ganti <div class="logo-placeholder"> dengan <img src="logo.png" alt="Komodo Project"> -->
+                <div class="logo-placeholder">KP</div>
+                <span>Komodo Project</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#layanan">Layanan</a></li>
-                <li><a href="#keunggulan">Keunggulan</a></li>
-                <li><a href="#alur">Alur Kerja</a></li>
-                <li><a href="#kontak">Hubungi Kami</a></li>
+                <li><a href="#katalog">Jelajahi Promosi</a></li>
+                <li><a href="#cara-kerja">Cara Kerja</a></li>
+                <li><button id="btnOpenModal" class="btn-nav-cta">+ Pasang Promosi</button></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero & Search Section -->
     <header>
-        <h1>Melejitkan Brand Anda,<br>Menyebarluaskan Informasi</h1>
-        <p>Mitra strategis terpercaya untuk mendongkrak visibilitas produk dan brand Anda ke audiens yang tepat secara masif.</p>
-        <a href="#kontak" class="cta-btn">Mulai Promosi Sekarang</a>
+        <div class="hero-content">
+            <span class="badge">Platform Direktori & Promosi Bisnis</span>
+            <h1>Temukan & Sebarluaskan Produk Terbaik</h1>
+            <p>Wadah kolaborasi bagi pemilik brand untuk mempromosikan produknya dan bagi pengunjung untuk menemukan penawaran terbaik.</p>
+            
+            <!-- Search Bar untuk User -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari produk, jasa, atau nama brand...">
+                <select id="categoryFilter">
+                    <option value="all">Semua Kategori</option>
+                    <option value="Kuliner & F&B">Kuliner & F&B</option>
+                    <option value="Fashion & Kecantikan">Fashion & Kecantikan</option>
+                    <option value="Jasa & Digital">Jasa & Digital</option>
+                    <option value="Elektronik & Gadget">Elektronik & Gadget</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        
-        <!-- Tentang Kami -->
-        <section id="tentang">
-            <div class="about-box">
-                <h2 class="section-title">Solusi Visibilitas Bisnis Anda</h2>
-                <p style="max-width: 800px; margin: 0 auto; color: #495057; font-size: 1.1rem;">
-                    Punya produk hebat tidak akan menghasilkan konversi jika tidak ada yang mengetahuinya. <strong>Komodo-Project</strong> hadir sebagai perpanjangan tangan bisnis Anda untuk membangun kesadaran publik <em>(brand awareness)</em> dan menjangkau pasar yang jauh lebih luas. 
-                </p>
-                <p style="max-width: 800px; margin: 15px auto 0; color: var(--secondary-color); font-weight: 600;">
-                    Filosofi Komodo: Tangguh, fokus pada target, dan memberikan dampak yang besar bagi pertumbuhan bisnis Anda.
-                </p>
+    <!-- Katalog Promosi (Tampilan Utama User) -->
+    <main class="container" id="katalog">
+        <div class="catalog-header">
+            <div>
+                <h2>Etalase Promosi Terbaru</h2>
+                <p id="resultCount">Menampilkan semua promosi aktif</p>
             </div>
-        </section>
+            <button id="btnOpenModalSecondary" class="btn-primary">+ Daftarkan Produk Anda</button>
+        </div>
 
-        <!-- Layanan -->
-        <section id="layanan">
-            <h2 class="section-title">Layanan Promosi Digital</h2>
-            <p class="section-subtitle">Strategi pemasaran terintegrasi yang dirancang khusus untuk memenuhi kebutuhan skala bisnis Anda.</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Content Marketing</h3>
-                    <p style="color: #495057;">Pembuatan artikel ulasan, advertorial, dan copywriting persuasif yang dirancang khusus memicu minat beli konsumen.</p>
+        <!-- Grid Produk akan diisi otomatis oleh script.js -->
+        <div class="product-grid" id="productGrid"></div>
+    </main>
+
+    <!-- Cara Kerja Platform -->
+    <section class="how-it-works" id="cara-kerja">
+        <div class="container">
+            <h2 class="section-title">Bagaimana Komodo Project Bekerja?</h2>
+            <div class="role-grid">
+                <div class="role-card">
+                    <h3>Untuk Pemilik Brand / Penjual</h3>
+                    <p>1. Klik tombol <strong>+ Pasang Promosi</strong> di bagian atas.</p>
+                    <p>2. Isi detail produk, deskripsi penawaran, kategori, dan nomor WhatsApp.</p>
+                    <p>3. Promosi Anda langsung tayang di etalase dan dapat ditemukan calon pembeli.</p>
                 </div>
-                <div class="service-card">
-                    <h3>Social Media Amplification</h3>
-                    <p style="color: #495057;">Menyebarluaskan pesan dan informasi produk Anda melalui jaringan media sosial untuk interaksi yang lebih organik.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Digital Branding</h3>
-                    <p style="color: #495057;">Konsultasi mendalam untuk memetakan posisi brand Anda di pasar digital agar anggaran iklan Anda efisien.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Media Placement</h3>
-                    <p style="color: #495057;">Akses penempatan rilis produk maupun promosi korporat Anda pada berbagai platform digital strategis terkemuka.</p>
+                <div class="role-card">
+                    <h3>Untuk Pengunjung / Pembeli</h3>
+                    <p>1. Gunakan kolom pencarian atau filter kategori untuk menemukan kebutuhan Anda.</p>
+                    <p>2. Bandingkan berbagai penawaran menarik dari brand lokal maupun jasa.</p>
+                    <p>3. Klik <strong>Hubungi Penjual</strong> untuk bertransaksi langsung tanpa perantara.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Keunggulan -->
-        <section id="keunggulan">
-            <h2 class="section-title">Mengapa Bermitra Dengan Kami?</h2>
-            <p class="section-subtitle">Komitmen kami adalah memberikan nilai tambah yang berdampak langsung pada performa bisnis Anda.</p>
-            
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nilai Utama Kami</th>
-                            <th>Manfaat Langsung Untuk Anda</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Strategi Berbasis Data</strong></td>
-                            <td>Setiap kampanye iklan didesain spesifik menyasar demografi target konsumen Anda, bukan spekulasi.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Investasi Terjangkau</strong></td>
-                            <td>Struktur harga yang fleksibel dan ramah bagi pelaku UMKM maupun korporasi yang sedang merintis lini baru.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Transparansi Laporan</strong></td>
-                            <td>Anda akan menerima laporan performa berkala yang jujur untuk setiap informasi yang disebarluaskan.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Eksekusi Cepat</strong></td>
-                            <td>Waktu adalah uang. Tim responsif kami siap mengeksekusi ide dan rilis promosi Anda tanpa penundaan.</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- Modal Form untuk Penjual Memasang Promosi -->
+    <div id="promoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Pasang Promosi Baru</h3>
+                <span class="close-btn" id="btnCloseModal">&times;</span>
             </div>
-        </section>
-
-        <!-- Alur Kerja -->
-        <section id="alur">
-            <h2 class="section-title">Alur Kerja yang Sederhana</h2>
-            <p class="section-subtitle">Kami memangkas birokrasi yang rumit agar kolaborasi berjalan cepat dan efisien.</p>
-            
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h4>Konsultasi</h4>
-                    <p style="font-size: 0.9rem; color: #555;">Diskusikan produk, info, atau target pasar yang ingin Anda sasar bersama tim kami.</p>
+            <form id="promoForm">
+                <div class="form-group">
+                    <label for="brandName">Nama Brand / Toko *</label>
+                    <input type="text" id="brandName" required placeholder="Contoh: Kopi Senja Nusantara">
                 </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h4>Formulasi</h4>
-                    <p style="font-size: 0.9rem; color: #555;">Kami merancang proposal taktis beserta pemilihan media promosi terbaik.</p>
+                <div class="form-group">
+                    <label for="productTitle">Judul Promosi / Produk *</label>
+                    <input type="text" id="productTitle" required placeholder="Contoh: Diskon 30% Paket Kopi Literan">
                 </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h4>Eksekusi</h4>
-                    <p style="font-size: 0.9rem; color: #555;">Pesan promosi Anda mulai disebarkan secara masif ke target audiens.</p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Kategori *</label>
+                        <select id="category" required>
+                            <option value="Kuliner & F&B">Kuliner & F&B</option>
+                            <option value="Fashion & Kecantikan">Fashion & Kecantikan</option>
+                            <option value="Jasa & Digital">Jasa & Digital</option>
+                            <option value="Elektronik & Gadget">Elektronik & Gadget</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="priceTag">Info Harga / Promo *</label>
+                        <input type="text" id="priceTag" required placeholder="Contoh: Mulai Rp 25.000">
+                    </div>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">04</div>
-                    <h4>Evaluasi</h4>
-                    <p style="font-size: 0.9rem; color: #555;">Kami menyerahkan laporan analitik komprehensif mengenai hasil jangkauan promosi.</p>
+                <div class="form-group">
+                    <label for="imageUrl">Link Gambar Produk (Opsional)</label>
+                    <input type="url" id="imageUrl" placeholder="https://contoh.com/gambar-produk.jpg">
+                    <small>Kosongkan jika ingin menggunakan gambar ilustrasi otomatis.</small>
                 </div>
-            </div>
-        </section>
-
-        <!-- Kontak -->
-        <section id="kontak">
-            <div class="contact-box">
-                <h2 class="section-title">Siap Mengembangkan Brand Anda?</h2>
-                <p class="section-subtitle" style="margin-bottom: 30px;">Jangan biarkan produk hebat Anda tidak terlihat oleh calon pembeli. Konsultasikan kebutuhan promosi Anda bersama kami sekarang, gratis.</p>
-                <!-- Ganti nomor telepon 6281234567890 di bawah dengan nomor WhatsApp Anda -->
-                <a href="https://wa.me/6281339800335?text=Halo%20Komodo%20Project,%20saya%20tertarik%20dengan%20jasa%20promosi%20profesional%20Anda." class="cta-btn" target="_blank">Hubungi Melalui WhatsApp</a>
-                <p style="margin-top: 25px; font-size: 0.85rem; color: var(--text-muted);">
-                    Email Resmi: info@komodo-project.com | Operasional: Senin - Sabtu (09:00 - 17:00 WIB)
-                </p>
-            </div>
-        </section>
-
+                <div class="form-group">
+                    <label for="description">Deskripsi Singkat Penawaran *</label>
+                    <textarea id="description" rows="3" required placeholder="Jelaskan keunggulan produk atau syarat promo Anda..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">Nomor WhatsApp Penjual *</label>
+                    <input type="tel" id="whatsapp" required placeholder="Contoh: 6281234567890 (Gunakan awalan 62)">
+                </div>
+                <button type="submit" class="btn-submit">Tayangkan Promosi Sekarang</button>
+            </form>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Komodo-Project. All Rights Reserved. Menghubungkan Informasi, Memperluas Jangkauan Bisnis.</p>
+        <p>&copy; 2026 Komodo Project. Platform Direktori & Promosi Bisnis Independen.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
